@@ -9,8 +9,6 @@ import {
     Heading
 } from 'grommet'
 
-import { Link } from 'react-scroll';
-
 // import {  } from './style';
 
 const Header = () => {
@@ -31,10 +29,9 @@ const Header = () => {
             }
         >
             <Nav>
-                <Link to='service'> Services</Link>
-                {/* <Anchor label='Services' hoverIndicator></Anchor> */}
-                {/* <Anchor label='Projects' hoverIndicator></Anchor> */}
-                {/* <Anchor label='Timer' hoverIndicator></Anchor> */}
+                <Anchor label='Services' hoverIndicator></Anchor>
+                <Anchor label='Projects' hoverIndicator></Anchor>
+                <Anchor label='Timer' hoverIndicator></Anchor>
             </Nav>
         </Sidebar>
     )
