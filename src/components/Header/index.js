@@ -9,19 +9,27 @@ import {
     Heading
 } from 'grommet'
 
+import {
+    LinkAbout,
+    LinkContact,
+    LinkPortfolio,
+    LinkService,
+} from '../../sections';
+
 // import {  } from './style';
 
-const Header = () => {
+function Header() {
     return (
         <Sidebar
-            width='small'
+            width='medium'
             background="light-2" 
             elevation='large'
             align='center'
+            style={{ position: 'fixed' }}
             header={
                 <Box align='center'>
                     <Avatar size='xlarge' src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
-                    <Heading size='small' level='2'>Rafael Dimas</Heading>
+                    <Heading size='small'>Rafael Dimas</Heading>
                 </Box>
             }
             footer={
@@ -29,9 +37,10 @@ const Header = () => {
             }
         >
             <Nav>
-                <Anchor label='Services' hoverIndicator></Anchor>
-                <Anchor label='Projects' hoverIndicator></Anchor>
-                <Anchor label='Timer' hoverIndicator></Anchor>
+                <LinkAbout hoverIndicator />
+                <LinkContact hoverIndicator />
+                <LinkPortfolio hoverIndicator />
+                <LinkService hoverIndicator />
             </Nav>
         </Sidebar>
     )
