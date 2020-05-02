@@ -1,9 +1,10 @@
 import React from 'react'
-import { Grommet, Grid, Box } from 'grommet'
+import { Grommet, Box } from 'grommet'
 
 import selectTheme from 'themes'
 
 import Sidebar from 'components/Sidebar'
+import { LayoutMainWithSidebar } from 'components/Layouts'
 
 import {
   SectionAbout,
@@ -12,35 +13,24 @@ import {
   SectionService,
 } from 'sections'
 
+const GRID_SIDEBAR_NAME = 'sidebar'
+const GRID_MAIN_NAME = 'main'
+
 function App() {
   return (
     <Grommet theme={selectTheme('dark')} full>
-      <Grid
-        rows={['full']}
-        columns={['auto', 'flex']}
-        gap="small"
-        areas={[
-          { name: 'sidebar', start: [0, 0], end: [0, 0] },
-          { name: 'main', start: [1, 0], end: [1, 0] },
-        ]}
-        full
+      <LayoutMainWithSidebar
+        sidebarName={GRID_SIDEBAR_NAME}
+        mainName={GRID_MAIN_NAME}
       >
-        <Sidebar gridArea="sidebar" />
-        <Box gridArea="main">
-          <SectionAbout
-            style={{ width: '100%', height: '100vh', background: '#000' }}
-          />
-          <SectionContact
-            style={{ width: '100%', height: '100vh', background: '#111' }}
-          />
-          <SectionPortfolio
-            style={{ width: '100%', height: '100vh', background: '#222' }}
-          />
-          <SectionService
-            style={{ width: '100%', height: '100vh', background: '#333' }}
-          />
+        <Sidebar gridArea={GRID_SIDEBAR_NAME} />
+        <Box gridArea={GRID_MAIN_NAME}>
+          <SectionAbout />
+          <SectionService />
+          <SectionPortfolio />
+          <SectionContact />
         </Box>
-      </Grid>
+      </LayoutMainWithSidebar>
     </Grommet>
   )
 }
