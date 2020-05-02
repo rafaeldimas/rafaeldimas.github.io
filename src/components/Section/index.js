@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 function Section({ name, children, ...props }) {
-    return (
-        <div id={name} {...props}>
-            {children}
-        </div>
-    );
+  return (
+    <div id={name} {...props}>
+      {children}
+    </div>
+  )
 }
 
 export default Section

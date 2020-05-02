@@ -1,4 +1,4 @@
-export { LinkAbout, SectionAbout } from './About';
-export { LinkContact, SectionContact } from './Contact';
-export { LinkPortfolio, SectionPortfolio } from './Portfolio';
-export { LinkService, SectionService } from './Service';
+export { LinkAbout, SectionAbout } from 'sections/About'
+export { LinkContact, SectionContact } from 'sections/Contact'
+export { LinkPortfolio, SectionPortfolio } from 'sections/Portfolio'
+export { LinkService, SectionService } from 'sections/Service'

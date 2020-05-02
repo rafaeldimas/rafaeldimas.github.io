@@ -1,16 +1,16 @@
 import React from 'react'
-import { Grommet, Grid, Box } from 'grommet';
+import { Grommet, Grid, Box } from 'grommet'
 
-import selectTheme from './themes'
+import selectTheme from 'themes'
 
-import Header from './components/Header'
+import Sidebar from 'components/Sidebar'
 
 import {
   SectionAbout,
   SectionContact,
   SectionPortfolio,
   SectionService,
-} from './sections'
+} from 'sections'
 
 function App() {
   return (
@@ -20,17 +20,25 @@ function App() {
         columns={['auto', 'flex']}
         gap="small"
         areas={[
-          { name: 'header', start: [0, 0], end: [0, 0] },
+          { name: 'sidebar', start: [0, 0], end: [0, 0] },
           { name: 'main', start: [1, 0], end: [1, 0] },
         ]}
         full
       >
-        <Header gridArea="header" />
+        <Sidebar gridArea="sidebar" />
         <Box gridArea="main">
-          <SectionAbout style={{ width: '100%', height: '100vh', background: '#000' }}/>
-          <SectionContact style={{ width: '100%', height: '100vh', background: '#111' }}/>
-          <SectionPortfolio style={{ width: '100%', height: '100vh', background: '#222' }}/>
-          <SectionService style={{ width: '100%', height: '100vh', background: '#333' }}/>
+          <SectionAbout
+            style={{ width: '100%', height: '100vh', background: '#000' }}
+          />
+          <SectionContact
+            style={{ width: '100%', height: '100vh', background: '#111' }}
+          />
+          <SectionPortfolio
+            style={{ width: '100%', height: '100vh', background: '#222' }}
+          />
+          <SectionService
+            style={{ width: '100%', height: '100vh', background: '#333' }}
+          />
         </Box>
       </Grid>
     </Grommet>

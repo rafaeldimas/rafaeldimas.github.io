@@ -1,12 +1,12 @@
-import { grommet } from 'grommet';
-import { deepMerge } from 'grommet/utils';
+import { grommet } from 'grommet'
+import { deepMerge } from 'grommet/utils'
 
-import light from './light';
-import dark from './dark';
+import light from 'themes/light'
+import dark from 'themes/dark'
 
 const themes = {
-    light,
-    dark
+  light,
+  dark,
 }
 
-export default theme => deepMerge(grommet, themes[theme] || {});
+export default (theme) => deepMerge(grommet, themes[theme] || {})
